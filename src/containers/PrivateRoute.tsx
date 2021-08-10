@@ -2,6 +2,7 @@ import {
     Route,
     Redirect
 } from "react-router-dom";
+import {getToken} from "../services/utils/common";
 
 interface IPrivateRoute {
     component: React.ReactNode
@@ -13,7 +14,7 @@ export const PrivateRoute = (props: IPrivateRoute) => {
 
     const isAuthenticated = (): boolean => {
         const expiresIn = sessionStorage.getItem('expires_in')
-        const accessToken = sessionStorage.getItem('access_token')
+        const accessToken = getToken();
         if (!expiresIn || +expiresIn < Date.now() || !accessToken) {
             return false
         }
