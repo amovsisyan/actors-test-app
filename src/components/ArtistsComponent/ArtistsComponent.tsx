@@ -13,7 +13,8 @@ export const ArtistsComponent = (props: IActorsComponent) => {
     return (
         <>
             {
-                artists.length ? <Row justify="center" align='middle' gutter={[16, 16]}>
+                // inline style is specific to the ant design, need to remove -8px margins that makes scrolling in body
+                artists.length ? <Row justify="center" align='middle' gutter={[16, 16]} style={{marginRight: 0, marginLeft: 0}}>
 
                         {
                             artists.map((artist) => <Col

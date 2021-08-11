@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import {ActorsComponent} from "../../components/ActorsComponent/ActorsComponent";
+import {SearchArtistsComponent} from "../../components/SearchArtistsComponent/SearchArtistsComponent";
 import {getArtists, IArtist} from "../../services/api/SpotifyApi";
 
-export const ActorsContainer = () => {
+export const SearchArtistsContainer = () => {
     const [artists, setArtists] = useState<IArtist[]>([])
 
     const onSearchHandler = (value: string) => {
@@ -12,7 +12,7 @@ export const ActorsContainer = () => {
     }
 
     return (
-        <ActorsComponent
+        <SearchArtistsComponent
             artists={artists}
             onSearch={onSearchHandler}
         />

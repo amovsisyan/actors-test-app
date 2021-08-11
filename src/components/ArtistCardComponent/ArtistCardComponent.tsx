@@ -2,6 +2,7 @@ import React from 'react';
 import {Card, Rate} from "antd";
 import {IArtist} from "../../services/api/SpotifyApi";
 import noImage from "../../images/no-image.png";
+import './ArtistCardComponent.css';
 
 const {Meta} = Card;
 
@@ -15,6 +16,7 @@ export const ArtistCardComponent = (props: IActorsComponent) => {
     return (
         <>
             <Card
+                className={'img_wrapper'}
                 hoverable
                 style={{width: 240}}
                 cover={<img src={artist.images[0] ? artist.images[0].url : noImage}/>}

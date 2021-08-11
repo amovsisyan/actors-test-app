@@ -1,0 +1,7 @@
+.img_wrapper .ant-card-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+    overflow: hidden;
+}

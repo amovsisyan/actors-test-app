@@ -1,7 +1,7 @@
 import React from 'react';
 import {Col, Row, Input} from "antd";
 import {IArtist} from "../../services/api/SpotifyApi";
-import './ActionsComponent.css';
+import './SearchArtistsComponent.css';
 import {ArtistsComponent} from "../ArtistsComponent/ArtistsComponent";
 
 const {Search} = Input;
@@ -11,14 +11,14 @@ interface IActorsComponent {
     onSearch: (value: string) => void
 }
 
-export const ActorsComponent = (props: IActorsComponent) => {
+export const SearchArtistsComponent = (props: IActorsComponent) => {
     const {artists, onSearch} = props;
 
     return (
         <>
             <Row justify="center" align='middle'>
                 <Col className={'col_wrapper'}>
-                    <Search placeholder="input search text" onSearch={onSearch} style={{width: 200}}/>
+                    <Search placeholder="Search for an artist..." onSearch={onSearch} style={{width: 200}}/>
                 </Col>
             </Row>
             <ArtistsComponent artists={artists} />

@@ -4,7 +4,7 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
-import {ActorsContainer} from "./containers/ActorsContainer/ActorsContainer";
+import {SearchArtistsContainer} from "./containers/SearchArtistsContainer/SearchArtistsContainer";
 import {LoginContainer} from "./containers/LoginContainer/LoginContainer";
 import {SpotifyLogin} from "./containers/SpotifyLogin/SpotifyLogin";
 import {Redirect} from "./containers/Redirect/Redirect";
@@ -23,7 +23,7 @@ export const App = () => {
                 <Route path="/redirect">
                     <Redirect/>
                 </Route>
-                <PrivateRoute path="/" component={ActorsContainer} />
+                <PrivateRoute path="/" component={SearchArtistsContainer} />
             </Switch>
         </Router>
     );
